@@ -1,0 +1,1 @@
+document.getElementById('code').textContent = 'Content from JS';
