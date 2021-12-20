@@ -7,16 +7,18 @@ try {
 } catch (_) {}
 
 module.exports = {
-  mode: process.env.NODE_ENV || 'development',
+  mode: process.env.NODE_ENV || 'development',
   entry: {
     index: './src/index.js',
   },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: './dist'
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: config.siteName || 'Playground',
+      title: config.siteName || 'Playground',
       template: 'index.html',
     }),
   ],
